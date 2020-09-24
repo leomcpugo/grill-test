@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Shared"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Griller", "leomcpugo.GrillTest.Griller\leomcpugo.GrillTest.Griller.csproj", "{91DE8938-323C-4456-8CAF-5329FA53FB31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Test", "leomcpugo.GrillTest.Test\leomcpugo.GrillTest.Test.csproj", "{49EE4276-EDC8-4512-AE50-B68C1A47CA9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EE4276-EDC8-4512-AE50-B68C1A47CA9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EE4276-EDC8-4512-AE50-B68C1A47CA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EE4276-EDC8-4512-AE50-B68C1A47CA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EE4276-EDC8-4512-AE50-B68C1A47CA9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
