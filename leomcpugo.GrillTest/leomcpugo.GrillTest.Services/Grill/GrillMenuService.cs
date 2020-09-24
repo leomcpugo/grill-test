@@ -18,16 +18,40 @@ namespace leomcpugo.GrillTest.Services.Grill
 
         public GrillMenuCookedInfoModel GetCookInfo(GrillModel grill, GrillMenuModel menu)
         {
-            double areaOfGrill = grill.Width * grill.Length;
-            var areaOfMenuList = menu.Items.Select(x => (x.Width * x.Length) * x.Quantity);
-            double areaOfMenu = areaOfMenuList.Sum();
+            int areaOfGrill = grill.Width * grill.Length;
 
-            // TODO: improve calculation so only full pieces are cooked each time
-            double numberOfRounds = areaOfMenu / areaOfGrill;
+            var areaOfMenuList = menu.Items
+                .SelectMany(x => Enumerable.Repeat((x.Width * x.Length), x.Quantity))
+                .OrderByDescending(x => x)
+                .ToList();
+            var menuItemsCount = areaOfMenuList.Count;
+
+            if (areaOfMenuList.Any(x => x == 0)) throw new ArgumentException("One of the menu items has no area");
+            if (areaOfMenuList.Any(x => x > areaOfGrill)) throw new ArgumentException("One of the menu items is larger than the grill");
+
+            var currentRound = 1;
+            double currentRoundSpace = 0;
+
+            // calculation made to grill only full pieces
+            for (int i = 0; i < menuItemsCount; i++)
+            {
+                var nextItem = areaOfMenuList.FirstOrDefault(x => x + currentRoundSpace <= areaOfGrill);
+
+                // There's no more space left in the grill
+                if (nextItem == default)
+                {
+                    currentRound++;
+                    currentRoundSpace = 0;
+                    nextItem = areaOfMenuList.First();
+                }
+
+                currentRoundSpace += nextItem;
+                areaOfMenuList.Remove(nextItem);
+            }
 
             return new GrillMenuCookedInfoModel
             {
-                Rounds = Convert.ToInt32(Math.Ceiling(numberOfRounds))
+                Rounds = currentRound
             };
         }
 
