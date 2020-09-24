@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Api", "leomcpugo.GrillTest.Api\leomcpugo.GrillTest.Api.csproj", "{58C3B901-9E06-45CF-9219-3FB067129C39}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Services", "leomcpugo.GrillTest.Services\leomcpugo.GrillTest.Services.csproj", "{09C5B939-5CB0-4E67-AC06-77E6AD891DC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Shared", "leomcpugo.GrillTest.Shared\leomcpugo.GrillTest.Shared.csproj", "{B30CB4CD-FEE9-45D4-BCC7-13607D223FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leomcpugo.GrillTest.Griller", "leomcpugo.GrillTest.Griller\leomcpugo.GrillTest.Griller.csproj", "{91DE8938-323C-4456-8CAF-5329FA53FB31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{58C3B901-9E06-45CF-9219-3FB067129C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58C3B901-9E06-45CF-9219-3FB067129C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58C3B901-9E06-45CF-9219-3FB067129C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58C3B901-9E06-45CF-9219-3FB067129C39}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09C5B939-5CB0-4E67-AC06-77E6AD891DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09C5B939-5CB0-4E67-AC06-77E6AD891DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C5B939-5CB0-4E67-AC06-77E6AD891DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{B30CB4CD-FEE9-45D4-BCC7-13607D223FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B30CB4CD-FEE9-45D4-BCC7-13607D223FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B30CB4CD-FEE9-45D4-BCC7-13607D223FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DE8938-323C-4456-8CAF-5329FA53FB31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

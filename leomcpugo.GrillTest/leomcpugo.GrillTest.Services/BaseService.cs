@@ -12,7 +12,12 @@ namespace leomcpugo.GrillTest.Services
     {
         protected static readonly HttpClient client = new HttpClient();
 
-
+        /// <summary>
+        /// Makes an HTTP call and returns a typed object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="url"></param>
+        /// <returns></returns>
         protected async Task<T> Get<T>(string url)
         {
             return JsonConvert.DeserializeObject<T>(await client.GetStringAsync(url));

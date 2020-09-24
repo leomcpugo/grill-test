@@ -8,6 +8,18 @@ namespace leomcpugo.GrillTest.Services.Grill
 {
     public interface IGrillMenuService
     {
-        public Task<List<GrillMenuModel>> GetAll();
+        /// <summary>
+        /// Retrieves all the Grill Menus
+        /// </summary>
+        /// <returns></returns>
+        Task<List<GrillMenuModel>> GetAll();
+
+        /// <summary>
+        /// Calculates the cooking info
+        /// </summary>
+        /// <param name="grill"></param>
+        /// <param name="menu"></param>
+        /// <returns></returns>
+        GrillMenuCookedInfoModel GetCookInfo(GrillModel grill, GrillMenuModel menu);
     }
 }
